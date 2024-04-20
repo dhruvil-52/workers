@@ -7,7 +7,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class BasicsWorkersCompComponent implements OnInit, OnDestroy {
   private worker: Worker;
-  sharedWorker: any;
+  sharedWorker: SharedWorker;
 
   constructor() { }
 
@@ -41,6 +41,6 @@ export class BasicsWorkersCompComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Terminate the worker when the component is destroyed
     this.worker.terminate();
-    this.sharedWorker.terminate();
+    this.sharedWorker.port.close();
   }
 }
