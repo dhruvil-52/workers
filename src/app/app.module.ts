@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BasicsWorkersCompComponent } from './basics-workers-comp/basics-workers-comp.component';
 import { SharedWorkerCompComponent } from './shared-worker-comp/shared-worker-comp.component';
 import { WebWorkerCompComponent } from './web-worker-comp/web-worker-comp.component';
+import { ServiceWorkerCompComponent } from './service-worker-comp/service-worker-comp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicsWorkersCompComponent,
     SharedWorkerCompComponent,
-    WebWorkerCompComponent
+    WebWorkerCompComponent,
+    ServiceWorkerCompComponent
   ],
   imports: [
     BrowserModule,
